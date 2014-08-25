@@ -4,9 +4,17 @@
   "description": "Real Time Blogging",
   "main": "release.js",
   "dependencies": {
-    "total.js": "~1.6.1"
+    "total.js": "~1.6.1",
+    "chalk": "~0.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-recess": "~0.7.0",
+    "grunt-bump": "0.0.15",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-jshint": "~0.10.0"
+  },
   "scripts": {
     "test": "node test.js"
   },
