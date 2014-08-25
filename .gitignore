@@ -1,0 +1,12 @@
+
+*.swp
+*.swo
+*.pid
+
+node_modules/*
+
+databases/*.cache
+databases/*.nosql
+tmp/*
+
+
