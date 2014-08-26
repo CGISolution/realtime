@@ -3,7 +3,8 @@ module.exports = function (grunt)
     grunt.initConfig({
         clean: {
             views: [
-                'views/*.html'
+                'views/**/*.html',
+                'app/views/**/*.html'
             ],
             js: [
                 'public/js/ui.bootstrap.js'

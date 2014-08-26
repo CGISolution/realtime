@@ -1,0 +1,21 @@
+nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse(role='navigation')
+    div.container-fluid
+        div.navbar-header
+            button.navbar-toggle(data-toggle='collapse', type='button', data-target='#main-nav')
+                span.sr-only Toggle Navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+        a.navbar-brand(href='/')
+            | Real Time
+
+        div#main-nav.collapse.navbar-collapse
+
+            ul.nav.navbar-nav
+                li.active
+                    a(href='/')
+                        i.fa.fa-home
+
+            a.navbar-text.navbar-right.navbar-link(href='/login')
+                i.fa.fa-sign-in

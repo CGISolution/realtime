@@ -1,6 +1,4 @@
-default-ip               : 127.0.0.1
-default-port             : 8000
-
+database                 : mongodb://nms:nmspassword@localhost:27017/realtimedev
 
 // CloudFlare cdnjs
 angular-version          : 1.2.18

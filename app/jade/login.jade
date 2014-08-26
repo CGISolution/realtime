@@ -1,0 +1,20 @@
+div(ng-include="'views/template/nav.html'")
+
+div.container
+
+    form(name='login', novalidate='novalidate')
+
+        div.col-sm-6.col-sm-offset-3
+
+            div.panel.panel-default
+                div.panel-heading
+                    h3.panel-title Login
+                div.panel-body
+                    div.form-group
+                        input.form-control(type='email', name='email', placeholder='E-mail')
+
+                    div.form-group
+                        input.form-control(type='password', name='pwd', placeholder='Password')
+
+                div.panel-footer
+                    button.btn.btn-primary(type='submit') Login

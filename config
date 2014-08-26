@@ -1,6 +1,6 @@
 name                     : Realtime
 version                  : 0.0.2
-author                   : William Gallios
+author                   : William Gallios <williamgallios@gmail.com>
 secret                   : your-secret-key
 
 // Mail settings
