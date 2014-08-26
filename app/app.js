@@ -21,6 +21,9 @@ app.config(function ($routeProvider, $locationProvider, $provide, $logProvider){
     }).when('/login', {
         templateUrl: 'views/login.html',
         controller: 'login'
+    }).when('/setup', {
+        templateUrl: 'views/setup/_layout.html',
+        controller: 'start_setup'
     }).otherwise({ redirectTo: '/' });
 
 });

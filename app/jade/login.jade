@@ -2,19 +2,26 @@ div(ng-include="'views/template/nav.html'")
 
 div.container
 
-    form(name='login', novalidate='novalidate')
+    form(name='login', ng-submit='submitLogin(login.$valid)', novalidate='novalidate')
+
+        alert(ng-show="(login.email.$dirty && login.email.$invalid) || (login.pwd.$dirty && login.pwd.$invalid)", type="warning")
+            span(ng-show='login.email.$error.required') Please enter your email
+            span(ng-show='login.email.$error.email') Please enter a valid email
+            span(ng-show='login.pwd.$error.required') Please enter your password
+
 
         div.col-sm-6.col-sm-offset-3
 
             div.panel.panel-default
                 div.panel-heading
                     h3.panel-title Login
+
                 div.panel-body
                     div.form-group
-                        input.form-control(type='email', name='email', placeholder='E-mail')
+                        input.form-control(type='email', name='email', required='required', placeholder='E-mail', ng-change='checkLoginForm()', ng-keydown='checkLoginForm()', ng-model='email')
 
                     div.form-group
-                        input.form-control(type='password', name='pwd', placeholder='Password')
+                        input.form-control(type='password', name='pwd', required='required', placeholder='Password', ng-change='checkLoginForm()', ng-keydown='checkLoginForm()', ng-model='pwd')
 
                 div.panel-footer
-                    button.btn.btn-primary(type='submit') Login
+                    button.btn.btn-primary(type='submit', ng-disabled='login.$invalid') Login

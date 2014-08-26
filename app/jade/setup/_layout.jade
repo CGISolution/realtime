@@ -1,0 +1,16 @@
+div(ng-include="'views/template/nav.html'")
+
+div.container
+
+    form(name='setup', ng-submit='runSetup(setup$valid)', novalidate='novalidate')
+
+        h1 Setup
+
+        p.lead Complete the forms below to setup your new site!
+
+        div.row
+            div.col-sm-6
+                div(ng-include="'views/setup/database.html'")
+
+            div.col-sm-6
+                div(ng-include="'views/setup/admin.html'")
