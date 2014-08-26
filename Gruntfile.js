@@ -3,7 +3,7 @@ module.exports = function (grunt)
     grunt.initConfig({
         clean: {
             views: [
-                'views/.html'
+                'views/*.html'
             ],
             css: [
                 'public/css/main.css',
@@ -11,12 +11,19 @@ module.exports = function (grunt)
             ]
         },
         jade: {
-            compile: {
-                expand: true,
-                cwd: 'app/jade/',
-                src: ['**/*.jade'],
-                dest: 'app/views/',
-                ext: '.phtml'
+            views: {
+                options: {
+                    data: {
+                        debug: true
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'jade',
+                    src: '**/*.jade',
+                    dest: 'views',
+                    ext: '.html'
+                }]
             }
         },
 
@@ -82,5 +89,5 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-recess');
 
-    grunt.registerTask('default', ['clean:html', 'clean:css', 'jshint', 'recess:dist', 'less:dev', 'less:min', 'jade']);
+    grunt.registerTask('default', ['clean:views', 'clean:css', 'jshint', 'recess:dist', 'less:dev', 'less:min', 'jade:views']);
 };
