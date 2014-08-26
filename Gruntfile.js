@@ -5,6 +5,9 @@ module.exports = function (grunt)
             views: [
                 'views/*.html'
             ],
+            js: [
+                'public/js/ui.bootstrap.js'
+            ],
             css: [
                 'public/css/main.css',
                 'public/css/main.min.css'
@@ -22,6 +25,20 @@ module.exports = function (grunt)
                     cwd: 'jade',
                     src: '**/*.jade',
                     dest: 'views/',
+                    ext: '.html'
+                }]
+            },
+            appviews: {
+                options: {
+                    data: {
+                        debug: true
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'app/jade',
+                    src: '**/*.jade',
+                    dest: 'app/views/',
                     ext: '.html'
                 }]
             }
@@ -60,6 +77,20 @@ module.exports = function (grunt)
                 gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
             }
         },
+
+        // for angular-ui-bootstrap
+        concat: {
+            options: {
+                separator: ';'
+            },
+            uibootstrap: {
+                src: [
+                    'bower_components/angular-bootstrap/ui-bootstrap.js',
+                    'bower_components/angular-bootstrap/ui-bootstrap-tpls.js'
+                ],
+                dest: 'public/js/ui.bootstrap.js'
+            }
+        },
         less: {
             dev: {
                 options: {
@@ -84,10 +115,11 @@ module.exports = function (grunt)
 
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-recess');
 
-    grunt.registerTask('default', ['clean:views', 'clean:css', 'jshint', 'recess:dist', 'less:dev', 'less:min', 'jade:views']);
+    grunt.registerTask('default', ['clean:views', 'clean:js', 'clean:css', 'jshint', 'recess:dist', 'less:dev', 'less:min', 'concat:uibootstrap', 'jade:views', 'jade:appviews']);
 };

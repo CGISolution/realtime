@@ -1,11 +1,11 @@
-name                     : My web site
-version                  : 1.01
-author                   : Your company name
+name                     : Realtime
+version                  : 0.0.1
+author                   : William Gallios
 secret                   : your-secret-key
 
 // Mail settings
-mail.smtp                : smtp.yourwebsite.com
+mail.smtp                : smtp.domain.com
 mail.smtp.options        : "{"secure":false,"port":25,"user":"","password":"","timeout":10000}"
-mail.address.from        : your@yourwebsite.com
-mail.address.reply       : your@yourwebsite.com
-mail.address.bcc         : 
+mail.address.from        : noreply@domain.com
+mail.address.reply       : noreply@domain.com
+mail.address.bcc         :

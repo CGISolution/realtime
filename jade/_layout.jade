@@ -1,0 +1,31 @@
+| @{ng('angular', 'resource', 'route')}
+| @{meta('RTCMS', 'Real Time Bloggig', '')}
+| @{ngLocale('en-us')}
+| @{ngController('home', 'user')}
+
+
+doctype html
+html(lang='en', ng-app='realtime')
+    head
+        | @{meta}
+
+        | @{head}
+
+        link(type='text/css', rel='stylesheet', href='/css/main.css')
+
+        script(type='text/javascript', src='/js/ui.bootstrap.js')
+
+        meta(http-equiv="X-UA-Compatible", content="IE=10")
+        meta(name="format-detection", content="telephone=no")
+        meta(name="viewport", content="width=1024, user-scalable=yes")
+        meta(name="robots", content="all,follow")
+
+        | @{favicon('favicon.ico')}
+
+        title RT Blog
+
+        base(href='/')
+
+    body
+        | @{body}
+
