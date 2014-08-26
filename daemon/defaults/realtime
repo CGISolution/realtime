@@ -1,0 +1,8 @@
+
+USER="node-user"
+
+# Location of application
+APP_PATH="/var/www/realtime/"
+
+# index file to execute (do not include .js)
+INDEX_FILE='debug'
