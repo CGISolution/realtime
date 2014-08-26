@@ -94,7 +94,7 @@ module.exports = function (grunt)
         less: {
             dev: {
                 options: {
-                    paths: ['public/less', 'node_modules/bootstrap/less'],
+                    paths: ['public/less', 'node_modules/bootstrap/less', 'node_modules/font-awesome/less'],
                     compress: false
                 },
                 files: {
