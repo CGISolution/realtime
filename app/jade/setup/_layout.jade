@@ -4,11 +4,11 @@ div.container
 
     form(name='setup', ng-submit='runSetup(setup.$valid)', novalidate='novalidate')
 
-        alert(ng-show="(setup.dbhost.$dirty && setup.dbhost.$invalid) || setup.dbname.$error || setup.dbuser.$error || setup.dbpass.$error", type="warning")
-            span(ng-show='setup.dbhost.$error.required') Please the host databse server
-            span(ng-show='setup.dbname.$error.required') Please the database name
-            span(ng-show='setup.dbuser.$error.required') Please the database username
-            span(ng-show='setup.dbpass.$error.required') Please the database password
+        alert(ng-if!="(setup.dbhost.$error || setup.dbname.$error || setup.dbuser.$error || setup.dbpass.$error", type="warning")
+            span(ng-if='setup.dbhost.$error.required') Please the host databse server
+            span(ng-if='setup.dbname.$error.required') Please the database name
+            span(ng-if='setup.dbuser.$error.required') Please the database username
+            span(ng-if='setup.dbpass.$error.required') Please the database password
 
 
         h1 Setup
