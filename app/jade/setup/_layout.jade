@@ -2,7 +2,7 @@ div(ng-include="'views/template/nav.html'")
 
 div.container
 
-    form(name='setup', ng-submit='runSetup(setup$valid)', novalidate='novalidate')
+    form(name='setup', ng-submit='runSetup(setup.$valid)', novalidate='novalidate')
 
         h1 Setup
 
@@ -14,3 +14,9 @@ div.container
 
             div.col-sm-6
                 div(ng-include="'views/setup/admin.html'")
+
+    div.form-group
+        div.col-sm-12
+            button.btn.btn-primary(type='submit')
+                i.fa.fa-cog
+                |  Run Setup
