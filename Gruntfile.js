@@ -46,7 +46,15 @@ module.exports = function (grunt)
         },
 
         jshint: {
-            all: ['Gruntfile.js', 'controllers/*.js']
+            all: [
+                'app/app.js',
+                'Gruntfile.js',
+                'controllers/*.js',
+                'models/*.js',
+                'app/controller/*.js',
+                'app/directives/*.js',
+                'mongoose.js'
+            ]
         },
         // CSS/LESS lint
         recess: {

@@ -9,17 +9,17 @@ div.panel.panel-default
 
         div.form-group
             label.control-label Host[:port]
-            input.form-control(type='text', placeholder='127.0.0.1:27071')
+            input.form-control(type='text', name='dbhost', required='required', placeholder='127.0.0.1:27071')
 
         div.form-group
             label.control-label Database
-            input.form-control(type='text', placeholder='RTDB')
+            input.form-control(type='text', name='dbname', required='required', placeholder='RTDB')
 
         div.form-group
             label.control-label User
-            input.form-control(type='text', placeholder='root')
+            input.form-control(type='text', name='dbuser', required='required', placeholder='root')
 
         div.form-group
             label.control-label Password
-            input.form-control(type='password', placeholder='')
+            input.form-control(type='password', name='dbpass', required='required', placeholder='')
 

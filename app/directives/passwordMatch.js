@@ -14,5 +14,5 @@ angular.module('rt.directives', []).directive('passwordMatch', [function () {
                 });
             });
         }
-    }
+    };
 }]);

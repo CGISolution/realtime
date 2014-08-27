@@ -1,4 +1,4 @@
-database                 : mongodb://nms:nmspassword@localhost:27017/realtimedev
+database                 : mongodb://nms:nmspassword@localhost:27017/admin
 
 // CloudFlare cdnjs
 angular-version          : 1.2.18
