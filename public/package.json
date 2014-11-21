@@ -1,0 +1,27 @@
+{
+  "name": "Realtime",
+  "version": "0.0.3",
+  "description": "Real time blogging",
+  "main": "release.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CGISolution/realtime.git"
+  },
+  "keywords": [
+    "real",
+    "time",
+    "blogging"
+  ],
+  "author": "William Gallios <williamgallios@gmail.com>",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/CGISolution/realtime/issues"
+  },
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.1"
+  }
+}
