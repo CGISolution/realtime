@@ -1,8 +1,8 @@
 name                     : Realtime
 version                  : 0.0.3
 author                   : William Gallios <williamgallios@gmail.com>
-secret                   : your-secret-key
-
+secret                   : r3@l5ug@r=)
+algorithm                : aes256
 directory-views          : /jade/
 
 // Mail settings

@@ -6,6 +6,7 @@
  * grunt-contrib-jade
  * grunt-contrib-less
  * grunt-contrib-uglify
+ * grunt-file-exists
  * grunt-service
  * grunt-prompt
  * grunt-bump
@@ -18,5 +19,12 @@ module.exports = {
         'less',
         'jade',
         'uglify'
-    ]
+    ],
+    'server': [
+        'clean',
+        'jshint:all',
+        'less',
+        'jade',
+        'uglify'
+    ],
 };

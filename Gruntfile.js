@@ -1,4 +1,5 @@
 var path = require('path');
+var Grunt = require('./grunt/Grunt');
 
 module.exports = function (grunt) {
 

@@ -13,6 +13,7 @@ module.exports = {
             'controllers/*.js',
             'models/*.js',
             'modules/*.js',
+            'grunt/*.js',
             'app/controller/*.js',
             'app/directives/*.js',
             'mongoose.js'
