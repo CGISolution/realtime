@@ -3,6 +3,8 @@ version                  : 0.0.3
 author                   : William Gallios <williamgallios@gmail.com>
 secret                   : your-secret-key
 
+directory-views          : /jade/
+
 // Mail settings
 mail.smtp                : smtp.domain.com
 mail.smtp.options        : "{"secure":false,"port":25,"user":"","password":"","timeout":10000}"

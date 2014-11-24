@@ -1,22 +1,23 @@
 
 
 module.exports = {
-    dev: {
+    site: {
         options: {
-            paths: ['public/less', 'node_modules/bootstrap/less', 'node_modules/font-awesome/less'],
+            sourceMap: true,
+            sourceMapFilename: 'public/css/main.map',
+            sourceMapURL: '/css/main.map',
+            sourceMapBasepath: 'public',
+            sourceMapRootpath: '/',
+            paths: [
+                'public/less',
+                'public/node_modules/bootstrap/less',
+                'public/node_modules/font-awesome/less',
+                'public/bower_components/lesshat/build'
+            ],
             compress: false
         },
         files: {
             'public/css/main.css': 'public/less/main.less',
-        }
-    },
-    min: {
-        options: {
-            paths: ['public/less', 'node_modules/bootstrap/less', 'vendor/components/font-awesome/less'],
-            compress: true
-        },
-        files: {
-            'public/css/main.min.css': 'public/less/main.less',
         }
     }
 };

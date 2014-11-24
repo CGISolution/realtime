@@ -29,9 +29,19 @@ html(lang='en', ng-app='realtime')
         script(type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.2.4/moment-timezone.min.js')
         script(type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-retina/0.3.1/angular-retina.min.js')
 
-        link(type='text/css', rel='stylesheet', href='/css/main.css')
+        script(type='text/javascript', src='/js/ngControllers.js')
+        script(type='text/javascript', src='/js/ngServices.js')
+        script(type='text/javascript', src='/js/ngDirectives.js')
+        script(type='text/javascript', src='/js/ngResources.js')
 
-        script(type='text/javascript', src='/js/ui.bootstrap.js')
+        script(type='text/javascript' src='/js/npm.js')
+        script(type='text/javascript' src='/js/bowerComponents.js')
+        // script(type='text/javascript' src='/js/submodules.js')
+
+
+        script(type='text/javascript', ng-repeat='script in scripts', ng-src='{{script}}')
+
+        link(type='text/css', rel='stylesheet', href='/css/main.css')
 
         meta(http-equiv="X-UA-Compatible", content="IE=10")
         meta(name="format-detection", content="telephone=no")
@@ -46,4 +56,4 @@ html(lang='en', ng-app='realtime')
         base(href='/')
 
     body
-        div(ng-view='ng-view')
+        div.site-container(ng-view='ng-view')

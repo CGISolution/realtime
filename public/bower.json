@@ -1,0 +1,30 @@
+{
+  "name": "Real",
+  "version": "0.0.3",
+  "homepage": "https://github.com/CGISolution/realtime",
+  "authors": [
+    "William Gallios <williamgallios@gmail.com>"
+  ],
+  "description": "Real Time Blogging",
+  "main": "release.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "GPLv3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "velocity-ui-angular": "~0.3.5",
+    "lesshat": "~3.0.2",
+    "lodash": "~2.4.1",
+    "velocity": "~1.1.0",
+    "angulartics": "~0.17.1",
+    "angular-dialog-service": "https://github.com/wgallios/angular-dialog-service.git#~5.1.3"
+  }
+}

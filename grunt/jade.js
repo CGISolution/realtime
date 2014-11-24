@@ -14,6 +14,21 @@ module.exports = {
             ext: '.html'
         }]
     },
+    templates: {
+        options: {
+            data: {
+                debug: true,
+                pretty: true
+            }
+        },
+        files: [{
+            expand: true,
+            cwd: 'app/jade-templates',
+            src: '**/*.jade',
+            dest: 'app/templates/',
+            ext: '.html'
+        }]
+    },
     appviews: {
         options: {
             data: {

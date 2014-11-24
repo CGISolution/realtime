@@ -3,6 +3,9 @@ exports.install = function(framework) {
 };
 
 function view_app() {
-    var self = this;
-    self.view('app');
+    var _this = this;
+
+    _this.cors('*', ['GET']);
+    _this.layout('_layout');
+    _this.view('app');
 }
