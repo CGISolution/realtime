@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/CGISolution/realtime.git"
+    "url": "git://github.com/wgallios/realtime.git"
   },
   "keywords": [
     "real",
@@ -18,7 +18,7 @@
   "author": "William Gallios <williamgallios@gmail.com>",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/CGISolution/realtime/issues"
+    "url": "https://github.com/wgallios/realtime/issues"
   },
   "dependencies": {
     "font-awesome": "~4.2.0",
