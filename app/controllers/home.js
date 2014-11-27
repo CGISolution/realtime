@@ -1,7 +1,7 @@
 
 function home ($scope) {
     $scope.checkLoginForm = function () {
-        if (this.login.email.$dirty) {
+        if ($scope.login.email.$dirty) {
            // $log.warn($scope.email);
         }
     };
@@ -15,4 +15,3 @@ function home ($scope) {
 
 function login ($scope) {
 }
-

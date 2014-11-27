@@ -3,7 +3,9 @@
 module.exports = {
     framework: {
         files: [
-            '*.js',
+            'test.js',
+            'debug.js',
+            'release.js',
             'controllers/**/*.js',
             'definitions/**/*.js',
             'models/**/*.js',
@@ -12,7 +14,8 @@ module.exports = {
             'Gruntfile.js'
         ],
         tasks: [
-            'jshint:all'
+            'jshint:all',
+            'service:restart'
         ]
     },
     ngControllers: {

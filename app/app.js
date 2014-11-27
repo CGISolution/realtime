@@ -1,4 +1,11 @@
-var app = angular.module('realtime', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('realtime', [
+    'ngRoute',
+    'ngResource',
+    'velocity.ui',
+    'ngAnimate',
+    'ngCookies',
+    'ui.bootstrap'
+]);
 
 
 app.config(function ($routeProvider, $locationProvider, $provide, $logProvider){
@@ -26,4 +33,8 @@ app.config(function ($routeProvider, $locationProvider, $provide, $logProvider){
         controller: 'start_setup'
     }).otherwise({ redirectTo: '/' });
 
+});
+
+app.config(function ($controllerProvider) {
+    $controllerProvider.allowGlobals();
 });
